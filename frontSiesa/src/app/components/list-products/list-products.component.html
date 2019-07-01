@@ -1,0 +1,42 @@
+<section class="sectionListProd">
+  <!-- <div style="text-align:center">
+    <h1>
+      Bienvenido {{ User }} a: {{ title }}!
+    </h1>
+  </div> -->
+
+  <div class="card">
+    <div class="card-body">
+      <h5> Listado de Productos </h5>
+      <button type="button" (click)="openCreateProd()" class="btnCreate btn btn-outline-primary">Crear Producto
+      </button>
+      <div class="tableFixHead">
+          <table class="table table-striped" id="sortable">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope="col" (click)="sortTable(0, 'str')">Nombre del Producto</th>
+                  <th scope="col" (click)="sortTable(0, 'str')">Descripción</th>
+                  <th scope="col" (click)="sortTable(0, 'int')">Precio</th>
+                  <th scope="col" (click)="sortTable(0, 'str')">Fecha</th>
+                  <th scope="col">Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of products">
+                  <td>{{ product.nameProd }}</td>
+                  <td>{{ product.descProd }}</td>
+                  <td>{{ product.price }}</td>
+                  <td>{{ product.createdOn }}</td>
+                  <td>
+                      <div class="btn-group" role="group" aria-label="Basic example">
+                          <button type="button" class="btn btn-success" [routerLink]="['/editProduct', product.id]">Editar</button>
+                          <button type="button" class="btn btn-danger" (clic)="deleteProduct(product.id)">Eliminar</button>
+                        </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,33 @@
+<section class="styleSectionUpdate">
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="col-xs-12 offset-sm-4"> Editar Producto </h5>
+          <form ngNativeValidate (ngSubmit)="updateProduct(f)" #f="ngForm" ngForm>
+            <div class="col-xs-12 offset-sm-4">
+              <div class="form-group col-6">
+                <label for="nameProd">Nombre Producto</label>
+                <input type="text" [(ngModel)]="productUPD.nameProd" type="text" name="nombre" class="form-control" placeholder="Digite nombre">
+              </div>
+              <div class="form-group col-6">
+                <label for="descProd">Descripción Producto</label>
+                <input type="text" [(ngModel)]="productUPD.descProd" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Digite descripción">
+              </div>
+              <div class="form-group col-6">
+                <label for="price">Precio Producto</label>
+                <input type="number" [(ngModel)]="productUPD.price" [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Digite precio">
+              </div>
+              <div class="form-group col-6">
+                <label for="disccount">Descuento Producto</label>
+                <input type="number" [(ngModel)]="productUPD.disccount" [ngModelOptions]="{standalone: true}" ngModel class="form-control" placeholder="Digite descuento">
+              </div>
+            </div>
+  
+            <div class="btnUpdate">
+              <button type="submit" class="btn btn-primary btn-lg btn-block">Actualizar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>

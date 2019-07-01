@@ -1,0 +1,37 @@
+<section class="styleSectionCreate">
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="col-xs-12 offset-sm-4"> Creación de producto </h5>
+        <form (ngSubmit)="saveProduct(f)" #f="ngForm" ngForm>
+          <div class="col-xs-12 offset-sm-4">
+            <div class="form-group col-6">
+              <label for="nameProd">Nombre Producto</label>
+              <input type="text" id="nameProd" name="nameProd" ngModel class="form-control" placeholder="Digite nombre">
+            </div>
+            <div class="form-group col-6">
+              <label for="descProd">Descripción Producto</label>
+              <input type="text" id="descProd" name="descProd" ngModel class="form-control" placeholder="Digite descripción">
+            </div>
+            <div class="form-group col-6">
+              <label for="price">Precio Producto</label>
+              <input type="number" id="price" name="price" ngModel class="form-control" placeholder="Digite precio">
+            </div>
+            <div class="form-group col-6">
+              <label for="disccount">Descuento Producto</label>
+              <input type="number" id="disccount" name="disccount" ngModel class="form-control" placeholder="Digite descuento">
+            </div>
+            <div class="form-group col-6">
+                <label for="createdOn">Fecha Producto</label>
+                <input type="date" id="createdOn" name="createdOn" ngModel class="form-control" placeholder="Digite fecha">
+              </div>
+          </div>
+
+          <div class="btnCreate">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
